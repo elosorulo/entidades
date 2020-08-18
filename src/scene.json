@@ -1,0 +1,51 @@
+{
+    "events": [
+        {
+            "id": "1",
+            "time": 0.00,
+            "type": "SET_AMBIENT_LIGHT",
+            "ambientLight": {
+                "intensity": 0.8
+            }
+        },
+        {
+            "time": 0.00,
+            "id": "2",
+            "type": "SET_SPOTLIGHT",
+            "spotLights": [
+                {
+                    "position": [0, 0, 30],
+                    "target": [0, 0, 0],
+                    "angle": 0.3,
+                    "penumbra": 1,
+                    "intensity": 2,
+                    "castShadow": true,
+                    "shadowMapSizeWidth": 4096,
+                    "shadowMapSizeHeight": 4096
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "time": 0.00,
+            "type": "SET_PLANE",
+            "color": "red"
+        },
+        {
+            "id": "4",
+            "time": 1.00,
+            "type": "PLAY_BASIC_SHAPE",
+            "initial_position": [0, 0, 0],
+            "final_position": [5, 0, 0],
+            "speed": 1
+        },
+        {
+            "id": "5",
+            "type": "PLAY_BASIC_SHAPE",
+            "time": 4.00,
+            "initial_position": [0, 0, 0],
+            "final_position": [5, 0, 0],
+            "speed": 1
+        }
+    ]
+}
