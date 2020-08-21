@@ -36,11 +36,11 @@ const Effects = () => {
   return (
     <Suspense fallback={null}>
       <EffectComposer>
-        <BrightnessContrast brightness={0.15} contrast={0.4}/>
-        <DepthOfField focalLength={0.01} bokehScale={8} height={1080} target={[0, 0, 0]}/>
-        <Noise opacity={0.1} />
+        <BrightnessContrast brightness={0.06} contrast={0.2}/>
+        <DepthOfField focalLength={0.4} bokehScale={8} height={1080} target={[0, 0, 0]}/>
+        <Noise opacity={0.05} />
         <Outline ref={outlineRef} blendFunction={BlendFunction.ALPHA} visibleEdgeColor={"black"}/>
-        <Vignette eskil={false} offset={0.1} darkness={0.8} />
+        <Vignette eskil={false} offset={0.1} darkness={0.2} />
       </EffectComposer>
     </Suspense>
   );
