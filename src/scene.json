@@ -1,51 +1,125 @@
-{
+{    
     "events": [
         {
-            "id": "1",
             "time": 0.00,
-            "type": "SET_AMBIENT_LIGHT",
-            "ambientLight": {
-                "intensity": 0.8
+            "type": "SET",
+            "element": "CAMERA",
+            "props": {
+                "rotation": [-0.05, 0, 0],
+                "position": [0, 6, 12]
             }
         },
         {
             "time": 0.00,
-            "id": "2",
-            "type": "SET_SPOTLIGHT",
-            "spotLights": [
-                {
-                    "position": [0, 0, 30],
-                    "target": [0, 0, 0],
-                    "angle": 0.3,
-                    "penumbra": 1,
-                    "intensity": 2,
-                    "castShadow": true,
-                    "shadowMapSizeWidth": 4096,
-                    "shadowMapSizeHeight": 4096
-                }
-            ]
+            "type": "SET",
+            "element": "AMBIENT_LIGHT",
+            "props": {
+                "intensity": 0.8
+            }
         },
         {
-            "id": "3",
+            "id": "MAIN_SPOTLIGHT_1",
             "time": 0.00,
-            "type": "SET_PLANE",
-            "color": "red"
+            "type": "SET",
+            "element": "SPOT_LIGHT",
+            "props": {
+                "position": [0, 10, 0],
+                "target": [0, 0, 0],
+                "angle": 0.3,
+                "penumbra": 1,
+                "intensity": 2
+            }
         },
         {
-            "id": "4",
-            "time": 1.00,
-            "type": "PLAY_BASIC_SHAPE",
-            "initial_position": [0, 0, 0],
-            "final_position": [5, 0, 0],
-            "speed": 1
+            "id": "SURFACE_PLANE_1",
+            "time": 0.00,
+            "type": "SET",
+            "element": "PLANE",
+            "props": {
+                "position": [0, 0, 0],
+                "rotation": [-0.5, 0, 0],
+                "color": "hsla(210, 100% , 40%, 1)",
+                "width": 1000,
+                "height": 1000
+            }
         },
         {
-            "id": "5",
-            "type": "PLAY_BASIC_SHAPE",
-            "time": 4.00,
-            "initial_position": [0, 0, 0],
-            "final_position": [5, 0, 0],
-            "speed": 1
+            "id": "BACKGROUND_PLANE_1",
+            "time": 0.00,
+            "type": "SET",
+            "element": "PLANE",
+            "props": {
+                "position": [0, 0, -100],
+                "color": "hsla(210, 80% , 30%, 1)",
+                "width": 1000,
+                "height": 1000
+            }
+        },
+        {
+            "time": 1.0,
+            "type": "PLAY",
+            "element": "BASIC_SHAPE",
+            "props": {
+                "initialPosition": [-8, 3, -4],
+                "finalPosition": [10, 3, -5],
+                "duration": 10.0,
+                "speed": 3
+            }
+        },
+        {
+            "time": 5.0,
+            "type": "PLAY",
+            "element": "BASIC_SHAPE",
+            "props": {
+                "initialPosition": [-8, 3, 0],
+                "finalPosition": [10, 3, -1],
+                "duration": 10.0,
+                "speed": 3
+            }
+        },
+        {
+            "time": 5.5,
+            "type": "PLAY",
+            "element": "BASIC_SHAPE",
+            "props": {
+                "initialPosition": [-8, 5, -9],
+                "finalPosition": [10, 5, -9],
+                "duration": 10.0,
+                "speed": 2
+            }
+        },
+        {
+            "time": 5.3,
+            "type": "PLAY",
+            "element": "BASIC_SHAPE",
+            "props": {
+                "initialPosition": [-8, 3, 0],
+                "finalPosition": [10, 3, -1],
+                "duration": 10.0,
+                "speed": 5
+            }
+        },
+        {
+            "time": 6.0,
+            "type": "PLAY",
+            "element": "BASIC_SHAPE",
+            "props": {
+                "initialPosition": [-8, 3, -8],
+                "finalPosition": [10, 3, -8],
+                "duration": 10.0,
+                "speed": 6
+            }
+        },
+        {
+            "time": 4.0,
+            "type": "PLAY",
+            "element": "BASIC_SHAPE",
+            "props": {
+                "initialPosition": [-8, 6, -8],
+                "finalPosition": [10, 6, -8],
+                "duration": 10.0,
+                "speed": 5
+            }
         }
     ]
 }

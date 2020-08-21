@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import { useFrame } from 'react-three-fiber';
-import toonMaterial from './material/toonMaterial';
+import toonMaterial from '../material/toonMaterial';
 import { TorusBufferGeometry } from 'three';
-import { shapeHoverColor, shapeIdleColor } from './material/color';
+import { shapeHoverColor, shapeIdleColor } from '../material/color';
 
 const useOnLoad = (onLoad) => {
   const [ref, setRef] = useState(null);
@@ -15,23 +15,17 @@ const useOnLoad = (onLoad) => {
   return [ref, refCallback];
 }
 
-const Ring = React.forwardRef((props, ref) => {
+const Ring = React.forwardRef((props) => {
     // This reference will give us direct access to the mesh
     
     const [meshRef, meshCallback] = useOnLoad(props.onLoad);
-    
-    ref = meshRef;
 
-    // Set up state for the hovered and active state
-    const [hovered, setHover] = useState(false)
-    const [active, setActive] = useState(false)
-      
     // Rotate mesh every frame, this is outside of React without overhead
     useFrame(({clock}, delta) => {
-      //props.handleMesh(meshRef, clock, delta)
+      if(props.update)props.update(meshRef, clock, delta)
     })
 
-    const material = toonMaterial(hovered ? shapeHoverColor : shapeIdleColor);
+    const material = toonMaterial(shapeIdleColor);
     const geometry = new TorusBufferGeometry(
       0.5,
       0.1,
@@ -43,14 +37,13 @@ const Ring = React.forwardRef((props, ref) => {
     return (
       <mesh
         {...props}
+        receiveShadow={true}
+        castShadow={true}
         ref={meshCallback}
-        scale={active ? [2, 2, 2] : [1, 1, 1]}
-        onClick={e => setActive(!active)}
-        onPointerOver={e => setHover(true)}
-        onPointerOut={e => setHover(false)}
+        scale={props.scale ? props.scale : [1, 1, 1]}
         material = {material}
         geometry = {geometry}
-        rotation = {[Math.PI/2, Math.PI/2, 0]}
+        rotation = {props.rotation}
       />
     )
   });

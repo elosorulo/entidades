@@ -1,0 +1,40 @@
+// Camera
+
+export const SET_CAMERA = "SET_CAMERA";
+
+// Shapes
+
+export const PLAY_BASIC_SHAPE = "PLAY_BASIC_SHAPE";
+
+export const CLEAN_BASIC_SHAPE = "CLEAN_BASIC_SHAPE";
+
+// Ambient Light
+
+export const SET_AMBIENT_LIGHT = "SET_AMBIENT_LIGHT";
+
+export const UPDATE_AMBIENT_LIGHT = "UPDATE_AMBIENT_LIGHT";
+
+export const REMOVE_AMBIENT_LIGHT = "REMOVE_AMBIENT_LIGHT";
+
+// SpotLight
+
+export const SET_SPOT_LIGHT = "SET_SPOT_LIGHT";
+
+export const UPDATE_SPOT_LIGHT = "UPDATE_SPOT_LIGHT";
+
+export const REMOVE_SPOT_LIGHT = "REMOVE_SPOT_LIGHT";
+
+// Planes
+
+export const SET_PLANE = "SET_PLANE";
+
+export const UPDATE_PLANE = "UPDATE_PLANE";
+
+export const REMOVE_PLANE = "REMOVE_PLANE";
+
+
+// Outline
+
+export const SET_ADD_OUTLINE = "SET_ADD_OUTLINE";
+
+export const SET_REMOVE_OUTLINE = "SET_REMOVE_OUTLINE";
