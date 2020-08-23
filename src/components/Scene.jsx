@@ -14,7 +14,7 @@ import Rings from './shapes/Rings';
 import CustomEffects from './CustomEffects';
 import Player from './Player';
 
-const Scene = () => {
+const Scene = (props) => {
 
   return (
     <>
@@ -24,7 +24,7 @@ const Scene = () => {
       <PlanesProvider/>
       <Rings/>
       <Effects/>
-      <Player/>
+      <Player soundsApi={props.soundsApi}/>
     </>
   );
 };

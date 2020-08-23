@@ -42,3 +42,11 @@ export const SET_OUTLINED_MESH = "SET_OUTLINED_MESH";
 // Rings
 
 export const PLAY_RINGS_ANIMATION = "PLAY_RINGS_ANIMATION";
+
+// Sound
+
+export const PLAY_TRANSIENT_SOUND = "PLAY_TRANSIENT_SOUND";
+
+export const PLAY_LOOP_SOUND = "PLAY_LOOP_SOUND";
+
+export const STOP_LOOP_SOUND = "STOP_LOOP_SOUND";

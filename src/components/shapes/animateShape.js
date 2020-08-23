@@ -1,6 +1,5 @@
 import { Object3D } from 'three';
 import { Vector3 } from 'three';
-import lerp from 'lerp';
 import modulate from './modulate';
 
 const tempObject = new Object3D();
@@ -37,7 +36,7 @@ const arrayToVector = (array) => {
     );
 };
 
-const getSegmentDelay = (separation, duration, animationSize, key, speed) => (separation * (duration / (10 * animationSize)) * key) / speed;
+const getSegmentDelay = (separation, duration, animationSize, key, speed) => (separation * (duration / animationSize) * key) / speed;
 
 const getSegmentStartTime = (segmentStartTime, segmentDelay) => segmentStartTime + segmentDelay;
 
@@ -46,11 +45,13 @@ const getSegmentCurrentTime = (clock, segmentStartTime, speed) => (clock.elapsed
 const getSegmentEndTime = (segmentStartTime, duration) => segmentStartTime + duration;
 
 const animateShape = (mesh, clock, shape, index) => {
-    if(shape !== "EMPTY") {             
+    if(shape !== "EMPTY") {
+
         const segmentDelay = getSegmentDelay(shape.separation, shape.duration, shape.animationSize, shape.key, shape.speed);
         const segmentStartTime = getSegmentStartTime(shape.startTime, segmentDelay);
-        const segmentCurrentTime = getSegmentCurrentTime(clock,segmentStartTime, shape.speed);
         const segmentEndTime = getSegmentEndTime(segmentStartTime, shape.duration);
+        
+        const segmentCurrentTime = getSegmentCurrentTime(clock,segmentStartTime, shape.speed);
         
         const alpha = segmentCurrentTime / segmentEndTime;
 
@@ -61,7 +62,6 @@ const animateShape = (mesh, clock, shape, index) => {
             scaleInterpolation(tempObject, scale, alpha, shape);
             positionInterpolation(tempObject, initialPosition, finalPosition, alpha);
             tempObject.lookAt(finalPosition);
-            
         } else {
             tempObject.scale.x = 0;
             tempObject.scale.y = 0;

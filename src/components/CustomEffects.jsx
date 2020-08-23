@@ -37,7 +37,6 @@ const CustomEffects = () => {
         height: aspect.height
     }
 
-    console.log(aspect);
     return (
       <>
       <effectComposer ref={composer} args={[gl]}>

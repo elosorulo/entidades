@@ -1,6 +1,23 @@
 {    
     "events": [
         {
+            "time": 1.00,
+            "type": "ADD",
+            "element": "SOUND",
+            "props": {
+                "key": "ambiente-room-tone",
+                "file": "ambiente-room-tone-1-1"
+            }
+        },
+        {
+            "time": 1.10,
+            "type": "PLAY",
+            "element": "SOUND",
+            "props": {
+                "key": "ambiente-room-tone"
+            }
+        },
+        {
             "time": 0.00,
             "type": "SET",
             "element": "CAMERA",
@@ -57,43 +74,79 @@
         },
         {
             "time": 1.0,
-            "type": "PLAY",
-            "element": "RINGS_ANIMATION",
+            "type": "ADD",
+            "element": "SOUND",
             "props": {
-                "animationSize": 10,
-                "ring": {
-                    "modulation": {
-                        "type": "SQUARE",
-                        "frequency": "5",
-                        "amplitude": "1"
-                    },
-                    "scale": [2, 4, 2],
-                    "initialPosition": [-10, 3, -4],
-                    "finalPosition": [10, 10, 5],
-                    "duration": 10,
-                    "speed": 2,
-                    "separation": 10
-                }
+                "key": "sonido_constructivo_3",
+                "file": "sonido_constructivo_3"
             }
         },
         {
             "time": 1.0,
             "type": "PLAY",
+            "element": "SOUND",
+            "props": {
+                "key": "sonido_constructivo_3"
+            }
+        },
+        {
+            "time": 0.95,
+            "type": "PLAY",
             "element": "RINGS_ANIMATION",
             "props": {
-                "animationSize": 30,
+                "animationSize": 10,
                 "ring": {
+                    "color": "hsla(150, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "3"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [10, 5, 2],
+                    "finalPosition": [-10, 5, -2],
+                    "duration": 0.1,
+                    "speed": 7,
+                    "separation": 4
+                }
+            }
+        },
+        {
+            "time": 3,
+            "type": "ADD",
+            "element": "SOUND",
+            "props": {
+                "key": "sonido_constructivo_2",
+                "file": "sonido_constructivo_2"
+            }
+        },
+        {
+            "time": 3,
+            "type": "PLAY",
+            "element": "SOUND",
+            "props": {
+                "key": "sonido_constructivo_2"
+            }
+        },
+        {
+            "time": 2.95,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
                     "modulation": {
                         "type": "SAWTOOTH",
                         "frequency": "1",
                         "amplitude": "2"
                     },
                     "scale": [2, 4, 2],
-                    "initialPosition": [-10, 8, -4],
-                    "finalPosition": [10, 3, 5],
-                    "duration": 4,
-                    "speed": 3,
-                    "separation": 20
+                    "initialPosition": [-10, 8, 4],
+                    "finalPosition": [10, 8, 5],
+                    "duration": 0.2,
+                    "speed": 10,
+                    "separation": 8
                 }
             }
         }

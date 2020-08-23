@@ -2,6 +2,7 @@ import React from 'react';
 import { Canvas } from 'react-three-fiber';
 
 import Scene from './Scene';
+import { useSoundsApi } from './Sound';
 
 const FullSizeCanvas = (props) => {
     return (
@@ -10,12 +11,15 @@ const FullSizeCanvas = (props) => {
 }
 
 const Frame = () => {
+
+    const soundsApi = useSoundsApi();
+
     return (
         <FullSizeCanvas
             concurrent
             gl={{ antialias: false }}
         >
-            <Scene/>
+            <Scene soundsApi={soundsApi}/>
         </FullSizeCanvas>
     );
 

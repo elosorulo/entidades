@@ -19,7 +19,7 @@ const sawtoothModulation = (alpha, frequency, amplitude) => {
 
 const squareModulation = (alpha, frequency, amplitude) => {
     const phase = Math.sin(Math.PI * alpha * 8 * validateFrequency(frequency)) * validateAmplitude(amplitude);
-    return phase >= 0 ? 0.5 : 0.999;
+    return phase >= 0 ? 0.1 : 0.8;
 };
 
 const triangleModulation = (alpha, frequency, amplitude) => {
@@ -34,7 +34,6 @@ const modulate = (modulation, alpha) => {
     switch(modulation.type) {
         case SINE_MODULATION:
             const res = sineModulation(alpha, modulation.frequency, modulation.amplitude);
-            console.log(modulation);
             return res;
         case SAWTOOTH_MODULATION:
             return sawtoothModulation(alpha, modulation.frequency, modulation.amplitude);
