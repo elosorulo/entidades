@@ -1,5 +1,7 @@
 import { Object3D } from 'three';
 import { Vector3 } from 'three';
+import lerp from 'lerp';
+import modulate from './modulate';
 
 const tempObject = new Object3D();
 
@@ -18,8 +20,9 @@ const positionInterpolation = (mesh, initialPosition, finalPosition, alpha) => {
     mesh.position.z = nextPosition.z;
 };
 
-const scaleInterpolation = (mesh, scale, alpha) => {
-    const nextScale = interpolation(scale, new Vector3(0, 0, scale.z), Math.abs(Math.cos(Math.PI * alpha)));
+
+const scaleInterpolation = (mesh, scale, alpha, shape) => {
+    const nextScale = interpolation(scale, new Vector3(0, 0, scale.z), modulate(shape.modulation, alpha));
     
     mesh.scale.x = nextScale.x;
     mesh.scale.y = nextScale.y;
@@ -42,20 +45,20 @@ const getSegmentCurrentTime = (clock, segmentStartTime, speed) => (clock.elapsed
 
 const getSegmentEndTime = (segmentStartTime, duration) => segmentStartTime + duration;
 
-const animateShape = (mesh, clock, ring, index) => {
-    if(ring !== "EMPTY") {             
-        const segmentDelay = getSegmentDelay(ring.separation, ring.duration, ring.animationSize, ring.key, ring.speed);
-        const segmentStartTime = getSegmentStartTime(ring.startTime, segmentDelay);
-        const segmentCurrentTime = getSegmentCurrentTime(clock,segmentStartTime, ring.speed);
-        const segmentEndTime = getSegmentEndTime(segmentStartTime, ring.duration);
+const animateShape = (mesh, clock, shape, index) => {
+    if(shape !== "EMPTY") {             
+        const segmentDelay = getSegmentDelay(shape.separation, shape.duration, shape.animationSize, shape.key, shape.speed);
+        const segmentStartTime = getSegmentStartTime(shape.startTime, segmentDelay);
+        const segmentCurrentTime = getSegmentCurrentTime(clock,segmentStartTime, shape.speed);
+        const segmentEndTime = getSegmentEndTime(segmentStartTime, shape.duration);
         
         const alpha = segmentCurrentTime / segmentEndTime;
 
         if(alpha >= 0 && alpha <1) {
-            const initialPosition = arrayToVector(ring.initialPosition);
-            const finalPosition = arrayToVector(ring.finalPosition);
-            const scale = arrayToVector(ring.scale);
-            scaleInterpolation(tempObject, scale, alpha);
+            const initialPosition = arrayToVector(shape.initialPosition);
+            const finalPosition = arrayToVector(shape.finalPosition);
+            const scale = arrayToVector(shape.scale);
+            scaleInterpolation(tempObject, scale, alpha, shape);
             positionInterpolation(tempObject, initialPosition, finalPosition, alpha);
             tempObject.lookAt(finalPosition);
             

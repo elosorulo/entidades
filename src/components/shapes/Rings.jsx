@@ -10,6 +10,20 @@ import { storeApi, useStore} from '../../state/store';
 import { addOutlinedMeshAction } from '../../state/actions';
 import animateShape from './animateShape';
 
+const OUTLINE_KEY = "RINGS";
+
+const MATERIAL = "material"
+
+const RADIUS = 0.5;
+
+const TUBE = 0.1;
+
+const RADIAL_SEGMENTS = 9;
+
+const TUBULAR_SEGMENTS = 47;
+
+const ARC = 6.3;
+
 const RingAnimations = (props) => {
 
     const ringsRef = useRef();
@@ -19,7 +33,13 @@ const RingAnimations = (props) => {
         state.dispatch
     ]);
 
-    const geometry = new TorusBufferGeometry(0.5, 0.1, 9, 47, 6.3);
+    const geometry = new TorusBufferGeometry(
+        RADIUS,
+        TUBE,
+        RADIAL_SEGMENTS,
+        TUBULAR_SEGMENTS,
+        ARC
+    );
 
     useFrame(({clock}) => storeApi
         .getState()
@@ -32,7 +52,7 @@ const RingAnimations = (props) => {
 
     
     useEffect(() => {
-        dispatch(addOutlinedMeshAction(ringsRef.current, "rings"));
+        dispatch(addOutlinedMeshAction(ringsRef.current, OUTLINE_KEY));
     },[] );
 
     
@@ -46,7 +66,7 @@ const RingAnimations = (props) => {
             args={[null, null, amount]}
             scale={props.scale ? props.scale : [1, 1, 1]}
         >
-            <meshToonMaterial attach="material" color={shapeIdleColor} gradientMap={gradientMap(3)}/>
+            <meshToonMaterial attach={MATERIAL} color={shapeIdleColor} gradientMap={gradientMap(3)}/>
         </instancedMesh>
     )
 };

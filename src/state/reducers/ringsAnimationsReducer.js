@@ -19,9 +19,7 @@ const getNextFree = (firstIndex, animationSize) => {
 };
 
 const getRings = (rings, firstIndex, lastIndex, newRing) => {
-    
     return rings.map((ring, index) => {
-        console.log(firstIndex);
         return betweenRange(
             index,
             firstIndex,

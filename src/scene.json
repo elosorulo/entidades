@@ -62,11 +62,16 @@
             "props": {
                 "animationSize": 10,
                 "ring": {
+                    "modulation": {
+                        "type": "SQUARE",
+                        "frequency": "5",
+                        "amplitude": "1"
+                    },
                     "scale": [2, 4, 2],
                     "initialPosition": [-10, 3, -4],
                     "finalPosition": [10, 10, 5],
                     "duration": 10,
-                    "speed": 10,
+                    "speed": 2,
                     "separation": 10
                 }
             }
@@ -76,14 +81,19 @@
             "type": "PLAY",
             "element": "RINGS_ANIMATION",
             "props": {
-                "animationSize": 10,
+                "animationSize": 30,
                 "ring": {
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1",
+                        "amplitude": "2"
+                    },
                     "scale": [2, 4, 2],
                     "initialPosition": [-10, 8, -4],
                     "finalPosition": [10, 3, 5],
-                    "duration": 5,
-                    "speed": 10,
-                    "separation": 10
+                    "duration": 4,
+                    "speed": 3,
+                    "separation": 20
                 }
             }
         }
