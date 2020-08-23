@@ -1,17 +1,15 @@
 import * as actionTypes from '../actionTypes';
+import { omit } from 'lodash';
 
 const outlineReducer = (state, action) => {
     switch(action.type) {
-        case actionTypes.SET_ADD_OUTLINE:
+        case actionTypes.ADD_OUTLINED_MESH:
             return {
                 ...state,
-                addOutline: action.addOutline()
+                [action.key]: action.mesh
             };
-        case actionTypes.SET_REMOVE_OUTLINE:
-            return {
-                ...state,
-                removeOutline: action.removeOutline()
-            };
+        case actionTypes.SET_OUTLINED_MESH:
+            return omit(state, action.key);
         default:
             return state;
     };

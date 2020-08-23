@@ -1,22 +1,30 @@
-import * as Constants from './actionTypes';
+import * as types from './actionTypes';
 
 export const cleanBasicShapeAction = (key) => {
     return {
-        type: Constants.CLEAN_BASIC_SHAPE,
+        type: types.CLEAN_BASIC_SHAPE,
         key: key
     };
 };
 
-export const setAddOutlineAction = (addOutline) => {
+export const addOutlinedMeshAction = (mesh, key) => {
     return {
-        type: Constants.SET_ADD_OUTLINE,
-        addOutline: addOutline
+        type: types.ADD_OUTLINED_MESH,
+        key: key,
+        mesh: mesh
     };
 };
 
-export const setRemoveOutlineAction = (removeOutline) => {
+export const removeOutlinedMeshAction = (key) => {
     return {
-        type: Constants.SET_REMOVE_OUTLINE,
-        removeOutline: removeOutline
+        type: types.SET_OUTLINED_MESH,
+        key: key
     };
 };
+
+export const playRingsAnimationAction = (animationSize, props) => {
+    return {
+        type: types.PLAY_RINGS_ANIMATION,
+        props: props
+    };
+}

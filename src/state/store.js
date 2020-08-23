@@ -11,7 +11,12 @@ const initialState = {
     spotLights: [],
     shapes: [],
     planes: [],
-    outline: {}
+    outline: {},
+    ringsAnimations: {
+      amount: 100,
+      lastFree: 0,
+      rings: [...Array(100)].map((_, i) => "EMPTY"),
+    }
   }
   
 

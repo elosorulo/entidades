@@ -6,7 +6,7 @@
             "element": "CAMERA",
             "props": {
                 "rotation": [-0.05, 0, 0],
-                "position": [0, 6, 12]
+                "position": [0, 6, 25]
             }
         },
         {
@@ -58,67 +58,33 @@
         {
             "time": 1.0,
             "type": "PLAY",
-            "element": "BASIC_SHAPE",
+            "element": "RINGS_ANIMATION",
             "props": {
-                "initialPosition": [-8, 3, -4],
-                "finalPosition": [10, 3, -5],
-                "duration": 10.0,
-                "speed": 3
+                "animationSize": 10,
+                "ring": {
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-10, 3, -4],
+                    "finalPosition": [10, 10, 5],
+                    "duration": 10,
+                    "speed": 10,
+                    "separation": 10
+                }
             }
         },
         {
-            "time": 5.0,
+            "time": 1.0,
             "type": "PLAY",
-            "element": "BASIC_SHAPE",
+            "element": "RINGS_ANIMATION",
             "props": {
-                "initialPosition": [-8, 3, 0],
-                "finalPosition": [10, 3, -1],
-                "duration": 10.0,
-                "speed": 3
-            }
-        },
-        {
-            "time": 5.5,
-            "type": "PLAY",
-            "element": "BASIC_SHAPE",
-            "props": {
-                "initialPosition": [-8, 5, -9],
-                "finalPosition": [10, 5, -9],
-                "duration": 10.0,
-                "speed": 2
-            }
-        },
-        {
-            "time": 5.3,
-            "type": "PLAY",
-            "element": "BASIC_SHAPE",
-            "props": {
-                "initialPosition": [-8, 3, 0],
-                "finalPosition": [10, 3, -1],
-                "duration": 10.0,
-                "speed": 5
-            }
-        },
-        {
-            "time": 6.0,
-            "type": "PLAY",
-            "element": "BASIC_SHAPE",
-            "props": {
-                "initialPosition": [-8, 3, -8],
-                "finalPosition": [10, 3, -8],
-                "duration": 10.0,
-                "speed": 6
-            }
-        },
-        {
-            "time": 4.0,
-            "type": "PLAY",
-            "element": "BASIC_SHAPE",
-            "props": {
-                "initialPosition": [-8, 6, -8],
-                "finalPosition": [10, 6, -8],
-                "duration": 10.0,
-                "speed": 5
+                "animationSize": 10,
+                "ring": {
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-10, 8, -4],
+                    "finalPosition": [10, 3, 5],
+                    "duration": 5,
+                    "speed": 10,
+                    "separation": 10
+                }
             }
         }
     ]

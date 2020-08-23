@@ -35,6 +35,10 @@ export const REMOVE_PLANE = "REMOVE_PLANE";
 
 // Outline
 
-export const SET_ADD_OUTLINE = "SET_ADD_OUTLINE";
+export const ADD_OUTLINED_MESH = "ADD_OUTLINED_MESH";
 
-export const SET_REMOVE_OUTLINE = "SET_REMOVE_OUTLINE";
+export const SET_OUTLINED_MESH = "SET_OUTLINED_MESH";
+
+// Rings
+
+export const PLAY_RINGS_ANIMATION = "PLAY_RINGS_ANIMATION";
