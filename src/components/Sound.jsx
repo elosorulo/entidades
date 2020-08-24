@@ -18,18 +18,15 @@ export const eventTypes = {
 };
 
 const soundFns = {
-    add: (key, file) => {    
-        console.log(sounds);
+    add: (key, file) => {   
         sounds[key] = new Howl({
             src: [PREFIX + file + EXTENSION]
-        }); 
-        console.log(sounds);
+        });
     },
     loop: (key, loop) => {
         sounds[key].loop(loop);
     },
     play: (key) => {
-        console.log(sounds);
         sounds[key].play();
     },
     stop: (key) => {
@@ -46,7 +43,6 @@ var soundApi = {
     execute: (action) => {
         switch(action.type) {
             case eventTypes.ADD_SOUND:
-                console.log(action);
                 soundFns.add(action.props.key, action.props.file);
                 break;
             case eventTypes.PLAY_SOUND:

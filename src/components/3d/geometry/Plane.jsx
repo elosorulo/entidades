@@ -16,7 +16,7 @@ const Plane = props => {
           rotation={props.rotation ? props.rotation.map(n => Math.PI * n) : [0, 0, 0]}
         >
           <planeGeometry attach="geometry" args={[props.width, props.height]}/>
-          <meshToonMaterial attach="material" color={props.color} gradientMap={gradientMap(8)}/>
+          <meshPhongMaterial attach="material" color={props.color}/>
         </mesh>
         <mesh
           {...props}

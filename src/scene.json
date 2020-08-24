@@ -22,8 +22,8 @@
             "type": "SET",
             "element": "CAMERA",
             "props": {
-                "rotation": [-0.05, 0, 0],
-                "position": [0, 6, 25]
+                "rotation": [-0.01, 0, 0],
+                "position": [0, 5, 25]
             }
         },
         {
@@ -40,11 +40,11 @@
             "type": "SET",
             "element": "SPOT_LIGHT",
             "props": {
-                "position": [0, 10, 0],
+                "position": [0, 40, 0],
                 "target": [0, 0, 0],
-                "angle": 0.3,
-                "penumbra": 1,
-                "intensity": 2
+                "angle": 1,
+                "penumbra": 0.2,
+                "intensity": 0.8
             }
         },
         {
@@ -103,10 +103,10 @@
                         "amplitude": "3"
                     },
                     "scale": [2, 4, 2],
-                    "initialPosition": [10, 5, 2],
-                    "finalPosition": [-10, 5, -2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
                     "duration": 0.1,
-                    "speed": 7,
+                    "speed": 5,
                     "separation": 4
                 }
             }
@@ -138,13 +138,13 @@
                     "color": "hsla(10, 70%, 20%, 1)",
                     "modulation": {
                         "type": "SAWTOOTH",
-                        "frequency": "1",
-                        "amplitude": "2"
+                        "frequency": "1.6",
+                        "amplitude": "1"
                     },
                     "scale": [2, 4, 2],
-                    "initialPosition": [-10, 8, 4],
-                    "finalPosition": [10, 8, 5],
-                    "duration": 0.2,
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.17,
                     "speed": 10,
                     "separation": 8
                 }
