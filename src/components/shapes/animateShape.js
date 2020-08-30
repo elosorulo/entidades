@@ -36,7 +36,7 @@ const arrayToVector = (array) => {
     );
 };
 
-const getSegmentDelay = (separation, duration, animationSize, key, speed) => (separation * (duration / animationSize) * key) / speed;
+const getSegmentDelay = (separation, duration, animationSize, key, speed) => (separation * (duration / animationSize) * (key) * speed);
 
 const getSegmentStartTime = (segmentStartTime, segmentDelay) => segmentStartTime + segmentDelay;
 
@@ -46,16 +46,15 @@ const getSegmentEndTime = (segmentStartTime, duration) => segmentStartTime + dur
 
 const animateShape = (mesh, clock, shape, index) => {
     if(shape !== "EMPTY") {
-
         const segmentDelay = getSegmentDelay(shape.separation, shape.duration, shape.animationSize, shape.key, shape.speed);
         const segmentStartTime = getSegmentStartTime(shape.startTime, segmentDelay);
         const segmentEndTime = getSegmentEndTime(segmentStartTime, shape.duration);
         
         const segmentCurrentTime = getSegmentCurrentTime(clock,segmentStartTime, shape.speed);
         
-        const alpha = segmentCurrentTime / segmentEndTime;
-
+        const alpha = segmentCurrentTime / shape.duration;
         if(alpha >= 0 && alpha <1) {
+            console.log(shape.key);
             const initialPosition = arrayToVector(shape.initialPosition);
             const finalPosition = arrayToVector(shape.finalPosition);
             const scale = arrayToVector(shape.scale);

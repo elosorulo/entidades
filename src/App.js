@@ -7,7 +7,6 @@ import GlobalStyle from './style/GlobalStyle';
 function App() {
 
   const [started, setStarted] = React.useState(false);
-  console.log(started);
   return (
     <div className="App">
       <GlobalStyle/>

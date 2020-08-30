@@ -18,16 +18,20 @@ export const eventTypes = {
 };
 
 const soundFns = {
-    add: (key, file) => {   
+    add: (key, file, startTime) => {
+        console.log(startTime);
         sounds[key] = new Howl({
-            src: [PREFIX + file + EXTENSION]
+            src: [PREFIX + file + EXTENSION],
+            sprite: {
+                [`${key}_sound`]: [startTime * 1000, 1800000]
+            }
         });
     },
     loop: (key, loop) => {
         sounds[key].loop(loop);
     },
     play: (key) => {
-        sounds[key].play();
+        sounds[key].play(`${key}_sound`);
     },
     stop: (key) => {
         sounds[key].stop();
@@ -43,7 +47,7 @@ var soundApi = {
     execute: (action) => {
         switch(action.type) {
             case eventTypes.ADD_SOUND:
-                soundFns.add(action.props.key, action.props.file);
+                soundFns.add(action.props.key, action.props.file, action.startTime);
                 break;
             case eventTypes.PLAY_SOUND:
                 soundFns.play(action.props.key);

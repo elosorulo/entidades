@@ -19,7 +19,7 @@ const MATERIAL = "material"
 
 const RADIUS = 0.5;
 
-const TUBE = 0.1;
+const TUBE = 0.2;
 
 const RADIAL_SEGMENTS = 9;
 

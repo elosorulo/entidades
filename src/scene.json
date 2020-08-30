@@ -1,20 +1,21 @@
-{    
+{ 
+    "startTime": 0,
     "events": [
         {
-            "time": 1.00,
+            "time": 0,
             "type": "ADD",
             "element": "SOUND",
             "props": {
-                "key": "ambiente-room-tone",
-                "file": "ambiente-room-tone-1-1"
+                "key": "sonido",
+                "file": "sonido"
             }
         },
         {
-            "time": 1.10,
+            "time": 0,
             "type": "PLAY",
             "element": "SOUND",
             "props": {
-                "key": "ambiente-room-tone"
+                "key": "sonido"
             }
         },
         {
@@ -22,8 +23,8 @@
             "type": "SET",
             "element": "CAMERA",
             "props": {
-                "rotation": [-0.01, 0, 0],
-                "position": [0, 5, 25]
+                "rotation": [0, 0, 0],
+                "position": [0, 8, 25]
             }
         },
         {
@@ -41,23 +42,10 @@
             "element": "SPOT_LIGHT",
             "props": {
                 "position": [0, 40, 0],
-                "target": [0, 0, 0],
+                "target": [0, 0, 10],
                 "angle": 1,
                 "penumbra": 0.2,
                 "intensity": 0.8
-            }
-        },
-        {
-            "id": "SURFACE_PLANE_1",
-            "time": 0.00,
-            "type": "SET",
-            "element": "PLANE",
-            "props": {
-                "position": [0, 0, 0],
-                "rotation": [-0.5, 0, 0],
-                "color": "hsla(210, 100% , 40%, 1)",
-                "width": 1000,
-                "height": 1000
             }
         },
         {
@@ -66,37 +54,21 @@
             "type": "SET",
             "element": "PLANE",
             "props": {
-                "position": [0, 0, -100],
-                "color": "hsla(210, 80% , 30%, 1)",
+                "position": [0, 70, -90],
+                "color": "hsla(210, 100% , 45%, 1)",
                 "width": 1000,
                 "height": 1000
             }
         },
         {
-            "time": 1.0,
-            "type": "ADD",
-            "element": "SOUND",
-            "props": {
-                "key": "sonido_constructivo_3",
-                "file": "sonido_constructivo_3"
-            }
-        },
-        {
-            "time": 1.0,
-            "type": "PLAY",
-            "element": "SOUND",
-            "props": {
-                "key": "sonido_constructivo_3"
-            }
-        },
-        {
-            "time": 0.95,
+            "time": 3.55,
             "type": "PLAY",
             "element": "RINGS_ANIMATION",
+            "name": "character-1-1",
             "props": {
                 "animationSize": 10,
                 "ring": {
-                    "color": "hsla(150, 70%, 20%, 1)",
+                    "color": "hsla(10, 70%, 20%, 1)",
                     "modulation": {
                         "type": "SINE",
                         "frequency": "2",
@@ -105,33 +77,431 @@
                     "scale": [2, 4, 2],
                     "initialPosition": [30, 10, 0],
                     "finalPosition": [-30, 10, 0],
-                    "duration": 0.1,
-                    "speed": 5,
-                    "separation": 4
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
                 }
             }
         },
         {
-            "time": 3,
-            "type": "ADD",
-            "element": "SOUND",
-            "props": {
-                "key": "sonido_constructivo_2",
-                "file": "sonido_constructivo_2"
-            }
-        },
-        {
-            "time": 3,
-            "type": "PLAY",
-            "element": "SOUND",
-            "props": {
-                "key": "sonido_constructivo_2"
-            }
-        },
-        {
-            "time": 2.95,
+            "time": 5.20,
             "type": "PLAY",
             "element": "RINGS_ANIMATION",
+            "name": "character-2-1",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(150, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "0.5"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 7.02,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-2",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "3"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 8.70,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-2",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(150, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "0.5"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 10.45,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-3",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "3"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 12.21,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-3",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(100, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "0.5"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 13.95,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-4-14-0",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 14.85,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-4-14-89",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(100, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "0.5"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 15.71,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-5-15-7",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 16.51,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-5-16-6",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(100, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "0.5"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 17.49,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-6-17-5",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 18.35,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-6-18-3",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(100, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "0.5"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 19.22,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-19-2",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 21.02,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-6-21-02",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(100, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "0.5"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 21.00,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-21-02",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 22.72,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-22-75",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(100, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "0.5"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 22.72,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-22-75",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 24.50,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-6-24-52",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(100, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "0.5"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 24.50,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-24-52",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 26.25,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-6-26-27",
             "props": {
                 "animationSize": 10,
                 "ring": {
@@ -139,14 +509,773 @@
                     "modulation": {
                         "type": "SAWTOOTH",
                         "frequency": "1.6",
-                        "amplitude": "1"
+                        "amplitude": "0.5"
                     },
                     "scale": [2, 4, 2],
                     "initialPosition": [-30, 10, 0],
                     "finalPosition": [30, 10, 0],
-                    "duration": 0.17,
-                    "speed": 10,
-                    "separation": 8
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 26.25,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-26-27",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 26.91,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-6-26-27",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "0.5"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 26.91,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-26-27",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 27.57,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-6-27-59",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "0.5"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 27.57,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-27-59",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 28.02,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-6-28-00",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "0.5"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 28.02,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-28-00",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 28.44,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-6-28-42",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "0.5"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 28.44,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-28-42",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 28.88,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-6-28-90",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "0.5"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 28.88,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-28-90",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 31.95,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-6-31-97",
+            "props": {
+                "animationSize": 40,
+                "ring": {
+                    "color": "hsla(0, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "2"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 1.2,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 31.95,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-31-97",
+            "props": {
+                "animationSize": 40,
+                "ring": {
+                    "color": "hsla(0, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 1.2,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 35.45,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-6-35-47",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "2"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 35.45,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-35-47",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 37.20,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-6-37-22",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "2"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 37.20,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-35-22",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 39.39,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-6-39-41",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "2"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 39.39,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-39-41",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 40.27,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-6-40-29",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "2"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 40.27,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-40-29",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 41.14,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-6-41-14",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "2"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 41.14,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-41-14",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 42.02,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-6-42-04",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "2"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 42.02,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-42-04",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 42.90,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-2-6-42-92",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SAWTOOTH",
+                        "frequency": "1.6",
+                        "amplitude": "2"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [-30, 10, 0],
+                    "finalPosition": [30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 42.90,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-42-92",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 43.77,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-43-79",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 44.65,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-44-67",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 46.42,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-46-40",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 1.0,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 48.15,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-48-17",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "2",
+                        "amplitude": "4"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 1.0,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 49.90,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-49-92",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "0.5",
+                        "amplitude": "8"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
+                }
+            }
+        },
+        {
+            "time": 51.22,
+            "type": "PLAY",
+            "element": "RINGS_ANIMATION",
+            "name": "character-1-7-51-24",
+            "props": {
+                "animationSize": 10,
+                "ring": {
+                    "color": "hsla(10, 70%, 20%, 1)",
+                    "modulation": {
+                        "type": "SINE",
+                        "frequency": "0.5",
+                        "amplitude": "8"
+                    },
+                    "scale": [2, 4, 2],
+                    "initialPosition": [30, 10, 0],
+                    "finalPosition": [-30, 10, 0],
+                    "duration": 0.5,
+                    "speed": 1,
+                    "separation": 0.4
                 }
             }
         }

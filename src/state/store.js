@@ -1,6 +1,8 @@
 import { create } from 'zustand';
 import storeReducer from './reducers/storeReducer';
 
+const amount = 1000;
+
 const initialState = {
     camera: {
       position: [0, 0, 0]
@@ -13,9 +15,9 @@ const initialState = {
     planes: [],
     outline: {},
     ringsAnimations: {
-      amount: 100,
+      amount: amount,
       lastFree: 0,
-      rings: [...Array(100)].map((_, i) => "EMPTY"),
+      rings: [...Array(amount)].map((_, i) => "EMPTY"),
     }
   }
   

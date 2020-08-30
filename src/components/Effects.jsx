@@ -24,11 +24,12 @@ const Effects = () => {
   return (
     <Suspense fallback={null}>
       <EffectComposer>
-        <Bloom luminanceThreshold={0.1} luminanceSmoothing={0.3} height={1200} intensity={1}/>
-        <BrightnessContrast brightness={0.06} contrast={0.2}/>
-        <DepthOfField focalLength={10} bokehScale={120} height={10} target={[0, 0, 0]}/>
+        <DepthOfField focusDistance={0} focalLength={0.02} bokehScale={2} height={480} />
+        <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} height={300} />
+        <Noise opacity={0.2} />
+        <Vignette eskil={false} offset={0.1} darkness={1.1} />
+        <BrightnessContrast brightness={0.06} contrast={0.22}/>
         <Outline ref={outlineRef} blendFunction={BlendFunction.ALPHA} visibleEdgeColor={"black"}/>
-        <Vignette eskil={false} offset={0.1} darkness={0.2} />
       </EffectComposer>
     </Suspense>
   );

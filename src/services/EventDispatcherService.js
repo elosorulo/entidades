@@ -1,20 +1,26 @@
 import { eventTypes as SoundEventTypes } from '../components/Sound'; 
 
-const initialDelay = 1000;
+const isSoundEvent = action => Object.values(SoundEventTypes).includes(action.type);
 
 const EventDispatcherService = {
-    play: (events, dispatch, clock, soundsApi) => {
+    play: (events, startTime, dispatch, clock, soundsApi) => {
         events.map(event => {
-            setTimeout(() => {
-                if(Object.values(SoundEventTypes).includes(event.action.type)) {
-                    soundsApi.execute(event.action);
-                } else {
-                    dispatch({
+            if((!event.action.type.includes("PLAY") || (event.time >= startTime)) && !isSoundEvent(event.action)) {
+                setTimeout(() => {
+                        const elapsedTime = clock.elapsedTime;
+                        dispatch({
+                            ...event.action,
+                            startTime: elapsedTime
+                        })
+                }, (event.time - startTime) * 1000);
+            } else if (isSoundEvent(event.action)) {
+                soundsApi.execute(
+                    {
                         ...event.action,
-                        startTime: clock.elapsedTime
-                    })
-                }
-            }, initialDelay + event.time * 1000);
+                        startTime: startTime
+                    }
+                )
+            }
         });
     }
 };

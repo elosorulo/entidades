@@ -13,9 +13,11 @@ import { useStore } from '../state/store';
 import Rings from './shapes/Rings';
 import CustomEffects from './CustomEffects';
 import Player from './Player';
+import Panels from './shapes/Panels';
+import { OrbitControls} from 'drei';
 
 const Scene = (props) => {
-
+  
   return (
     <>
       <CameraProvider/>
