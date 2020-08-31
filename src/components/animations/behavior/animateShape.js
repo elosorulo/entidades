@@ -20,8 +20,8 @@ const positionInterpolation = (mesh, initialPosition, finalPosition, alpha) => {
 };
 
 
-const scaleInterpolation = (mesh, scale, alpha, shape) => {
-    const nextScale = interpolation(scale, new Vector3(0, 0, scale.z), modulate(shape.modulation, alpha));
+const scaleInterpolation = (mesh, initialScale, finalScale, alpha, shape) => {
+    const nextScale = interpolation(initialScale, finalScale, modulate(shape.modulation, alpha));
     
     mesh.scale.x = nextScale.x;
     mesh.scale.y = nextScale.y;
@@ -42,23 +42,20 @@ const getSegmentStartTime = (segmentStartTime, segmentDelay) => segmentStartTime
 
 const getSegmentCurrentTime = (clock, segmentStartTime, speed) => (clock.elapsedTime - segmentStartTime) * speed;
 
-const getSegmentEndTime = (segmentStartTime, duration) => segmentStartTime + duration;
-
 const animateShape = (mesh, clock, shape, index) => {
     if(shape !== "EMPTY") {
         const segmentDelay = getSegmentDelay(shape.separation, shape.duration, shape.animationSize, shape.key, shape.speed);
         const segmentStartTime = getSegmentStartTime(shape.startTime, segmentDelay);
-        const segmentEndTime = getSegmentEndTime(segmentStartTime, shape.duration);
         
         const segmentCurrentTime = getSegmentCurrentTime(clock,segmentStartTime, shape.speed);
         
         const alpha = segmentCurrentTime / shape.duration;
         if(alpha >= 0 && alpha <1) {
-            console.log(shape.key);
             const initialPosition = arrayToVector(shape.initialPosition);
             const finalPosition = arrayToVector(shape.finalPosition);
-            const scale = arrayToVector(shape.scale);
-            scaleInterpolation(tempObject, scale, alpha, shape);
+            const initialScale = arrayToVector(shape.initialScale);
+            const finalScale = arrayToVector(shape.finalScale);
+            scaleInterpolation(tempObject, initialScale, finalScale, alpha, shape);
             positionInterpolation(tempObject, initialPosition, finalPosition, alpha);
             tempObject.lookAt(finalPosition);
         } else {

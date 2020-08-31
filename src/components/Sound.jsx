@@ -19,7 +19,6 @@ export const eventTypes = {
 
 const soundFns = {
     add: (key, file, startTime) => {
-        console.log(startTime);
         sounds[key] = new Howl({
             src: [PREFIX + file + EXTENSION],
             sprite: {

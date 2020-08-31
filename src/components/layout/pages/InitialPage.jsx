@@ -15,7 +15,7 @@ const mobileHorizontal = !isVertical && isMobile && !isTablet;
 
 const Description = () => {
     return (
-        <Grid item xs={12} alignItems={"center"}>
+        <Grid item xs={12}>
             <Title mobileHorizontal={mobileHorizontal}>Entidades</Title>
             <SubTitle mobileHorizontal={mobileHorizontal}>Acontecimiento</SubTitle>
             <Credits mobileHorizontal={mobileHorizontal}>Manuel Strajman</Credits>
@@ -45,7 +45,7 @@ const InitialPage = (props) => {
     return (
         <Grid container justify={"center"} align={"center"} spacing={mobileHorizontal ? 3 : 10}>
             <Description/>
-            <Grid item xs={10} alignItems={"center"}>
+            <Grid item xs={10}>
                 <PlayButton play={props.start} started={props.started}/>
             </Grid>
         </Grid>

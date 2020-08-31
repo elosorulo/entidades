@@ -8,7 +8,7 @@ import { TorusBufferGeometry } from 'three';
 import { useEffect, useMemo } from 'react';
 import { storeApi, useStore} from '../../state/store';
 import { addOutlinedMeshAction } from '../../state/actions';
-import animateShape from './animateShape';
+import animateShape from '../animations/behavior/animateShape';
 import { Color, VertexColors } from 'three';
 import { Object3D } from 'three';
 import { Vector3 } from 'three';
