@@ -12,29 +12,27 @@ const validateFrequency = (frequency) => frequency ? frequency : 1;
 
 const validateAmplitude = (amplitude) => amplitude ? amplitude : 1;
 
-
-const sawtoothModulation = (alpha, frequency, amplitude) => {
-    return Math.abs(lerp(0, 0.5, Math.sin(Math.PI * (alpha > 0.5 ? alpha - 0.5 : alpha) * validateFrequency(frequency)))) * validateAmplitude(amplitude);
-};
-
 const squareModulation = (alpha, frequency, amplitude) => {
-    const phase = Math.sin(Math.PI * alpha * 8 * validateFrequency(frequency)) * validateAmplitude(amplitude);
+    const phase = Math.sin(Math.PI * alpha * validateFrequency(frequency)) * validateAmplitude(amplitude);
     return phase >= 0 ? 0.1 : 0.8;
 };
 
 const triangleModulation = (alpha, frequency, amplitude) => {
-    return alpha + lerp(-1, 1, Math.sin(Math.PI * alpha * validateFrequency(frequency))) * validateAmplitude(amplitude);
+    return (1 + lerp(-1, 1, Math.sin(Math.PI * validateFrequency(frequency) * alpha)) * validateAmplitude(amplitude)) / 2;
+};
+
+const sawtoothModulation = (alpha, frequency, amplitude) => {
+    return triangleModulation(alpha > 0.5 ? alpha - 0.5 : alpha, frequency, amplitude);
 };
 
 const sineModulation = (alpha, frequency, amplitude) => {
-    return alpha + Math.sin(Math.PI * alpha * validateFrequency(frequency) * validateAmplitude(amplitude));
+    return (1 + Math.sin(Math.PI * alpha * validateFrequency(frequency)) * validateAmplitude(amplitude)) / 2;
 };
 
 const modulate = (modulation, alpha) => {
     switch(modulation.type) {
         case SINE_MODULATION:
-            const res = sineModulation(alpha, modulation.frequency, modulation.amplitude);
-            return res;
+            return sineModulation(alpha, modulation.frequency, modulation.amplitude);
         case SAWTOOTH_MODULATION:
             return sawtoothModulation(alpha, modulation.frequency, modulation.amplitude);
         case TRIANGLE_MODULATION:

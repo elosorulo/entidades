@@ -55,21 +55,25 @@
         {
             "time": 3.55,
             "type": "PLAY",
-            "element": "SPHERES_ANIMATION",
+            "element": "RINGS_ANIMATION",
             "name": "character-1-1",
             "props": {
-                "animationSize": 10,
+                "animationSize": 20,
                 "shape": {
                     "isParticle": true,
                     "color": "hsla(10, 70%, 20%, 1)",
-                    "modulation": {},
-                    "initialScale": [1, 1, 1],
+                    "modulation": {
+                        "type": "TRIANGLE",
+                        "frequency" : 10,
+                        "amplitude": 4
+                    },
+                    "initialScale": [2, 2, 2],
                     "finalScale": [0, 0, 0],
                     "initialPosition": [30, 10, 0],
                     "finalPosition": [-30, 10, 0],
                     "duration": 2.2,
                     "speed": 1,
-                    "separation": 14.0
+                    "separation": 3.0
                 }
             }
         }
