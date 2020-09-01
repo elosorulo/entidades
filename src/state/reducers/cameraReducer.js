@@ -6,6 +6,11 @@ const cameraReducer = (state, action) => {
             return {
                 ...action.props
             }
+        case types.MOVE_CAMERA:
+            return {
+                ...action.props,
+                startTime: action.startTime
+            }
         default:
             return state
     }

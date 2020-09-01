@@ -2,6 +2,8 @@
 
 export const SET_CAMERA = "SET_CAMERA";
 
+export const MOVE_CAMERA = "MOVE_CAMERA";
+
 // Shapes
 
 export const PLAY_BASIC_SHAPE = "PLAY_BASIC_SHAPE";

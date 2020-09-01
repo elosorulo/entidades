@@ -5,14 +5,13 @@ import AmbientLightProvider from './providers/AmbientLightProvider';
 import SpotLightsProvider from './providers/SpotLightsProvider';
 import PlanesProvider from './providers/PlanesProvider';
 import RingAnimations from './animations/RingsAnimations';
-import Player from './Player';
+import Sequencer from './Sequencer';
 import DodecahedronsAnimations from './animations/DodecahedronsAnimations';
 import SpheresAnimations from './animations/SpheresAnimations';
 import TetrahedronsAnimations from './animations/TetrahedronsAnimations';
 import LathesAnimations from './animations/LathesAnimations';
 
 const Scene = (props) => {
-  
   return (
     <>
       <CameraProvider/>
@@ -25,7 +24,7 @@ const Scene = (props) => {
       <TetrahedronsAnimations/>
       <LathesAnimations/>
       <Effects/>
-      <Player soundsApi={props.soundsApi}/>
+      <Sequencer soundsApi={props.soundsApi}/>
     </>
   );
 };

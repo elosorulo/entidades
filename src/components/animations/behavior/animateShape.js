@@ -1,6 +1,7 @@
 import { Object3D } from 'three';
 import { Vector3 } from 'three';
 import modulate from './modulate';
+import shapesAnimationsReducer from '../../../state/reducers/shapesAnimationsReducer';
 
 const tempObject = new Object3D();
 
@@ -49,14 +50,26 @@ const animateShape = (mesh, clock, shape, index) => {
         
         const segmentCurrentTime = getSegmentCurrentTime(clock,segmentStartTime, shape.speed);
         
-        const alpha = segmentCurrentTime / shape.duration;
-        if(alpha >= 0 && alpha <1) {
+        const a = (segmentCurrentTime / shape.duration);
+        const alpha = shape.loop ? (shape.loop.isReverse ? a % 2: a % 1) : a;
+        if(alpha >= 0 && alpha <2) {
             const initialPosition = arrayToVector(shape.initialPosition);
             const finalPosition = arrayToVector(shape.finalPosition);
             const initialScale = arrayToVector(shape.initialScale);
             const finalScale = arrayToVector(shape.finalScale);
-            scaleInterpolation(tempObject, initialScale, finalScale, alpha, shape);
-            positionInterpolation(tempObject, initialPosition, finalPosition, alpha);
+            scaleInterpolation(
+                tempObject,
+                alpha > 1 ? finalScale : initialScale,
+                alpha > 1 ? initialScale : finalScale,
+                alpha > 1 ? alpha - 1 : alpha,
+                shape
+            );
+            positionInterpolation(
+                tempObject,
+                alpha > 1 ? finalPosition : initialPosition,
+                alpha > 1 ? initialPosition : finalPosition,
+                alpha > 1 ? alpha - 1 : alpha
+            );
             tempObject.lookAt(finalPosition);
         } else {
             tempObject.scale.x = 0;

@@ -1,7 +1,11 @@
 import { create } from 'zustand';
 import storeReducer from './reducers/storeReducer';
 
-const AMOUNT = 1000;
+const RINGS_AMOUNT = 10000;
+const DODECAHEDRONS_AMOUNT = 0;
+const SPHERES_AMOUNT = 1000;
+const LATHES_AMOUNT = 0;
+const TETRAHEDRONS_AMOUNT = 0;
 const EMPTY = "EMPTY";
 
 const animation = (amount) => {
@@ -23,11 +27,11 @@ const initialState = {
   shapes: [],
   planes: [],
   outline: {},
-  dodecahedronsAnimations: animation(AMOUNT),
-  tetrahedronsAnimations: animation(AMOUNT),
-  lathesAnimations: animation(AMOUNT),
-  spheresAnimations: animation(AMOUNT),
-  ringsAnimations: animation(AMOUNT)
+  dodecahedronsAnimations: animation(DODECAHEDRONS_AMOUNT),
+  tetrahedronsAnimations: animation(TETRAHEDRONS_AMOUNT),
+  lathesAnimations: animation(LATHES_AMOUNT),
+  spheresAnimations: animation(SPHERES_AMOUNT),
+  ringsAnimations: animation(RINGS_AMOUNT)
 };
 
 export const [useStore, storeApi] = create(set => ({

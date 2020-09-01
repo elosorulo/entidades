@@ -1,6 +1,6 @@
 import React from 'react';
 
-import gradientMap from '../3d/material/gradientMap';
+import gradientMap from '../material/gradientMap';
 import { VertexColors } from 'three';
 
 const MATERIAL = "material";

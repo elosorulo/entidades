@@ -25,7 +25,7 @@ const useAnimation = (key) => {
 
     useFrame(({clock}) => storeApi
         .getState()[key]
-.shapes
+        .shapes
         .forEach((shape, index) => {
                 if(shape.color) {
                     tempColor.current.set(shape.color).toArray(colorArray, index * 3);

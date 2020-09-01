@@ -1,7 +1,7 @@
 import React from 'react';
 
 import useAnimation from './behavior/useAnimation';
-import Animation from './Animation';
+import InstancedMesh from '../3d/mesh/InstancedMesh';
 import InstancedMeshColor from '../3d/material/InstancedMeshColor';
 
 const KEY = "ringsAnimations";
@@ -19,11 +19,11 @@ const RingAnimations = () => {
     const [ref, amount, colorArray] = useAnimation(KEY);
     
     return (
-        <Animation ref={ref} amount={amount} colors={colorArray}>
+        <InstancedMesh ref={ref} amount={amount} colors={colorArray}>
             <torusBufferGeometry attach={GEOMETRY} args={[RADIUS, TUBE, RADIAL_SEGMENTS, TUBULAR_SEGMENTS, ARC]}>
                 <InstancedMeshColor colors={colorArray}/>
             </torusBufferGeometry>
-        </Animation>
+        </InstancedMesh>
     );
 };
 

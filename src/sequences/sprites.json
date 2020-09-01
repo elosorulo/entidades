@@ -1,0 +1,45 @@
+{
+    "sprites": {
+        "ORANGE_DIALOG": { 
+            "action": "PLAY",
+            "type": "SINGLE",
+            "element": "RINGS_ANIMATION",
+            "props": {
+                "animationSize": 10,
+                "loop": {
+                    "isReverse": true
+                },
+                "isParticle": true,
+                "color": "hsla(10, 70%, 20%, 1)",
+                "modulation": {},
+                "initialScale": [2, 2, 2],
+                "finalScale": [0, 0, 0],
+                "initialPosition": [30, 10, 0],
+                "finalPosition": [-30, 10, 0],
+                "duration": 2,
+                "speed": 1,
+                "separation": 1.0
+            }
+        },
+        "ENTITY": { 
+            "action": "PLAY",
+            "type": "SINGLE",
+            "element": "SPHERES_ANIMATION",
+            "props": {
+                "animationSize": 1,
+                "loop": {
+                    "isReverse": true
+                },
+                "color": "hsla(10, 70%, 10%, 1)",
+                "modulation": {},
+                "initialScale": [1, 1, 1],
+                "finalScale": [1, 1, 1],
+                "initialPosition": [30, 10, 0],
+                "finalPosition": [30, 10, 0],
+                "duration": 10,
+                "speed": 1,
+                "separation": 1.0
+            }
+        }
+    }
+}

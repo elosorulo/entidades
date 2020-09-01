@@ -1,7 +1,7 @@
 import React from 'react';
 
 import useAnimation from './behavior/useAnimation';
-import Animation from './Animation';
+import InstancedMesh from '../3d/mesh/InstancedMesh';
 import InstancedMeshColor from '../3d/material/InstancedMeshColor';
 
 const KEY = "dodecahedronsAnimations";
@@ -16,11 +16,11 @@ const DodecahedronsAnimations = () => {
     const [ref, amount, colorArray] = useAnimation(KEY);
 
     return (
-        <Animation ref={ref} amount={amount} colors={colorArray}>
+        <InstancedMesh ref={ref} amount={amount} colors={colorArray}>
             <dodecahedronBufferGeometry attach={GEOMETRY} args={[RADIUS, DETAIL]}>
                 <InstancedMeshColor colors={colorArray}/>
             </dodecahedronBufferGeometry>
-        </Animation>
+        </InstancedMesh>
     )
 };
 

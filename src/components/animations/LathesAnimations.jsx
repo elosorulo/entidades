@@ -1,7 +1,7 @@
 import React from 'react';
 
 import useAnimation from './behavior/useAnimation';
-import Animation from './Animation';
+import InstancedMesh from '../3d/mesh/InstancedMesh';
 import InstancedMeshColor from '../3d/material/InstancedMeshColor';
 
 const GEOMETRY = "geometry";
@@ -17,11 +17,11 @@ const LathesAnimations = () => {
     const [ref, amount, colorArray] = useAnimation(KEY);
 
     return (
-        <Animation ref={ref} amount={amount} colors={colorArray}>
+        <InstancedMesh ref={ref} amount={amount} colors={colorArray}>
             <latheBufferGeometry attach={GEOMETRY} args={[SEGMENTS, PHI_START, PHI_LENGTH]}>
                 <InstancedMeshColor colors={colorArray}/>
             </latheBufferGeometry>
-        </Animation>
+        </InstancedMesh>
     )
 };
 

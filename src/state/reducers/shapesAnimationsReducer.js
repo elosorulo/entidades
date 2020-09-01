@@ -1,4 +1,4 @@
-const fragments = 10;
+const fragments = 4;
 
 const fragmentWidth = 3;
 
@@ -40,30 +40,30 @@ const getNextFree = (firstIndex, animationSize) => {
     return firstIndex + animationSize;
 };
 
-const getShapes = (oldShapes, firstIndex, lastIndex, newShape) => {
-    const particlePositions = newShape.isParticle ? getParticlePositions(
-        newShape.initialPosition,
-        newShape.finalPosition,
+const getShapes = (oldShapes, firstIndex, lastIndex, newProps) => {
+    const particlePositions = () => newProps.isParticle ? getParticlePositions(
+        newProps.initialPosition,
+        newProps.finalPosition,
         fragmentWidth,
         fragmentHeight,
         fragmentDepth
     ) : {};
-    const array = oldShapes.map((oldShape, index) => {
+    const array = oldShapes.map((oldProps, index) => {
         return betweenRange(
             index,
             firstIndex,
             lastIndex,
         ) ? {
-                ...newShape,
-                ...particlePositions,
+                ...newProps,
+                ...particlePositions(),
                 key: (index - firstIndex) % fragments
-            } : oldShape
+            } : oldProps
     });
     return array;
 };
 
-const updateAnimations = (oldShapes, amount, lastFree, startTime, animationSize, newShape) => {
-    const size = animationSize * (newShape.isParticle ? fragments : 1);
+const updateAnimations = (oldShapes, amount, lastFree, startTime, newProps) => {
+    const size = newProps.animationSize * (newProps.isParticle ? fragments : 1);
     const firstIndex = getFirstIndex(lastFree, size, amount);
     const lastIndex = getLastIndex(firstIndex, size);
     const nextFree = getNextFree(firstIndex, size);
@@ -72,8 +72,7 @@ const updateAnimations = (oldShapes, amount, lastFree, startTime, animationSize,
         lastFree: nextFree,
         shapes: getShapes(oldShapes, firstIndex, lastIndex, {
             startTime: startTime,
-            animationSize: size,
-            ...newShape
+            ...newProps
         })
     };
 };
@@ -87,8 +86,7 @@ const shapesAnimationsReducer = actionType => (state, action) => {
                 state.amount,
                 state.lastFree,
                 action.startTime,
-                action.props.animationSize,
-                action.props.shape
+                action.props
             );
         default:
             return state;
