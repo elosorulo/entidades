@@ -1,8 +1,8 @@
 { 
-    "startTime": 0,
+    "startTime": 9.64,
     "events": [
         {
-            "time": 0,
+            "time": 9.66,
             "type": "SINGLE",
             "action": "ADD",
             "element": "SOUND",
@@ -12,7 +12,7 @@
             }
         },
         {
-            "time": 0,
+            "time": 9.66,
             "type": "SINGLE",
             "action": "PLAY",
             "element": "SOUND",
@@ -21,23 +21,23 @@
             }
         },
         {
-            "time": 0.00,
+            "time": 9.66,
             "type": "SINGLE",
             "action": "MOVE",
             "element": "CAMERA",
             "props": {
                 "animation": {
-                    "initialRotation": [0, 0, 0],
-                    "finalRotation": [0, 0, 0],
-                    "initialPosition": [-100, 10, -80],
-                    "finalPosition": [0, 10, -80],
+                    "initialRotation": [-0.2, 0, 0],
+                    "finalRotation": [-0.2, 0, 0],
+                    "initialPosition": [-45, 30, -60],
+                    "finalPosition": [-45, 30, 200],
                     "duration": 30,
                     "speed": 1
                 }
             }
         },
         {
-            "time": 0.00,
+            "time": 9.66,
             "type": "SINGLE",
             "action": "SET",
             "element": "AMBIENT_LIGHT",
@@ -47,7 +47,7 @@
         },
         {
             "id": "MAIN_SPOTLIGHT_1",
-            "time": 0.00,
+            "time": 9.66,
             "type": "SINGLE",
             "action": "SET",
             "element": "SPOT_LIGHT",
@@ -61,7 +61,7 @@
         },
         {
             "id": "BACKGROUND_PLANE_1",
-            "time": 0.00,
+            "time": 9.66,
             "type": "SINGLE",
             "action": "SET",
             "element": "PLANE",
@@ -74,12 +74,12 @@
             }
         },
         {
-            "time": 0,
+            "time": 9.66,
             "type": "POLYPHONIC",
             "polyphony": {
                 "type": "INTERPOLATION_GRID",
                 "delay": 0.500,
-                "amount": [8, 1, 1],
+                "amount": [8, 1, 20],
                 "separation": [20, 0, 20],
                 "initialPosition": [-100, 10, -100],
                 "finalPosition": [-90, 10, -100]
@@ -87,12 +87,12 @@
             "sprites": ["BLUE_DIALOG"]
         },
         {
-            "time": 0,
+            "time": 9.66,
             "type": "POLYPHONIC",
             "polyphony": {
                 "type": "INTERPOLATION_GRID",
                 "delay": 0,
-                "amount": [8, 1, 1],
+                "amount": [8, 1, 20],
                 "separation": [20, 0, 20],
                 "initialPosition": [-100, 10, -100],
                 "finalPosition": [-100, 10, -100]
@@ -100,12 +100,12 @@
             "sprites": ["BLUE_ENTITY"]
         },
         {
-            "time": 0,
+            "time": 9.66,
             "type": "POLYPHONIC",
             "polyphony": {
                 "type": "INTERPOLATION_GRID",
                 "delay": 0,
-                "amount": [8, 1, 1],
+                "amount": [8, 1, 20],
                 "separation": [20, 0, 20],
                 "initialPosition": [-90, 10, -100],
                 "finalPosition": [-90, 10, -100]

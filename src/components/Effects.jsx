@@ -26,9 +26,9 @@ const Effects = () => {
       <EffectComposer>
         <DepthOfField focusDistance={0} focalLength={0.02} bokehScale={2} height={480} />
         <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} height={300} />
-        <Noise opacity={0.2} />
-        <Vignette eskil={false} offset={0.1} darkness={1.1} />
-        <BrightnessContrast brightness={0.06} contrast={0.22}/>
+        <Noise opacity={0.01} />
+        <Vignette eskil={false} offset={0.1} darkness={0.1} />
+        <BrightnessContrast brightness={0.06} contrast={0.16}/>
         <Outline ref={outlineRef} blendFunction={BlendFunction.ALPHA} visibleEdgeColor={"black"}/>
       </EffectComposer>
     </Suspense>

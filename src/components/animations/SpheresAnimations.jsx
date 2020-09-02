@@ -9,12 +9,12 @@ const GEOMETRY = "geometry";
 const KEY = "spheresAnimations";
 
 const RADIUS = 3;
-const WIDTH_SEGMENTS = 15;
-const HEIGHT_SEGMENTS = 10;
+const WIDTH_SEGMENTS = 25;
+const HEIGHT_SEGMENTS = 25;
 const PHI_START = 0;
 const PHI_LENGTH = 6.3;
 const THETA_START = 0;
-const THETA_LENGTH = 3.1;
+const THETA_LENGTH = 3.15;
 
 const SpheresAnimations = () => {
     

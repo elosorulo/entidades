@@ -1,11 +1,11 @@
 import { create } from 'zustand';
 import storeReducer from './reducers/storeReducer';
 
-const RINGS_AMOUNT = 10000;
+const RINGS_AMOUNT = 0;
 const DODECAHEDRONS_AMOUNT = 0;
-const SPHERES_AMOUNT = 1000;
+const SPHERES_AMOUNT = 10000;
 const LATHES_AMOUNT = 0;
-const TETRAHEDRONS_AMOUNT = 0;
+const TETRAHEDRONS_AMOUNT = 400;
 const EMPTY = "EMPTY";
 
 const animation = (amount) => {
