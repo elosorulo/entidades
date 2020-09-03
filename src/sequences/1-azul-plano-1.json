@@ -2,25 +2,6 @@
     "startTime": 0,
     "events": [
         {
-            "time": 0,
-            "type": "SINGLE",
-            "action": "ADD",
-            "element": "SOUND",
-            "props": {
-                "key": "sonido",
-                "file": "sonido"
-            }
-        },
-        {
-            "time": 0,
-            "type": "SINGLE",
-            "action": "PLAY",
-            "element": "SOUND",
-            "props": {
-                "key": "sonido"
-            }
-        },
-        {
             "time": 0.00,
             "type": "SINGLE",
             "action": "MOVE",
@@ -29,9 +10,9 @@
                 "animation": {
                     "initialRotation": [0, 0, 0],
                     "finalRotation": [0, 0, 0],
-                    "initialPosition": [-100, 10, -80],
+                    "initialPosition": [-150, 10, -80],
                     "finalPosition": [0, 10, -80],
-                    "duration": 30,
+                    "duration": 45,
                     "speed": 1
                 }
             }

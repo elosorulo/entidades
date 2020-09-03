@@ -1,10 +1,10 @@
 const fragments = 4;
 
-const fragmentWidth = 3;
+const fragmentWidth = 2;
 
-const fragmentHeight = 3;
+const fragmentHeight = 2;
 
-const fragmentDepth = 3;
+const fragmentDepth = 2;
 
 const delta = (max) => Math.random() * max - max / 2;
 

@@ -23,28 +23,28 @@ const ATTRIBUTES = "attributes";
 
 const COLOR = "color";
 
-const PANNEL_WIDTH = "7";
+const PANNEL_WIDTH = "10";
 
 const PANNEL_HEIGHT = "7";
 
-const AMOUNT = 200;
+const AMOUNT = 62500;
 
 const OFFSET_X = 6;
 
-const OFFSET_Y = 10;
+const OFFSET_Y = 0;
 
-const MULTIPLYER = 10;
+const MULTIPLYER = 15;
 
-const GRID_X = 20;
+const GRID_X = 250;
 
-const GRID_Y = 20;
+const GRID_Y = 250;
 
 
 const randomBetween0And1 = () => {
     return Math.floor(Math.random() * 10) / 300;
 }
 
-const Z_POSITION = -80;
+const Z_POSITION = -140;
 
 
 const gridYPosition = (key, gridMaxY, offsetY) => {
@@ -66,7 +66,7 @@ const Panels = (props) => {
         state.dispatch
     ]);
 
-    const colorArray = useMemo(() => Float32Array.from(new Array(AMOUNT).fill().flatMap((_) => tempColor.set(`hsla(210, 0%, ${8 + Math.floor(Math.random() * 5)}%, 1)`).toArray())), [])
+    const colorArray = useMemo(() => Float32Array.from(new Array(AMOUNT).fill().flatMap((_) => tempColor.set(`hsl(265, 100%, 5%)`).toArray())), [])
 
     const positions = new Array(AMOUNT).fill().map((_, k) => 
         new Vector3(
@@ -127,7 +127,7 @@ const Panels = (props) => {
             <boxBufferGeometry attach={GEOMETRY} args={[PANNEL_WIDTH, PANNEL_WIDTH, 0.2]}>
                 <instancedBufferAttribute attachObject={[ATTRIBUTES, COLOR]} args={[colorArray, 3]} />
             </boxBufferGeometry>
-            <meshToonMaterial attach={MATERIAL} gradientMap={gradientMap(3)} vertexColors={VertexColors}/>
+            <meshPhongMaterial attach={MATERIAL} gradientMap={gradientMap(3)} vertexColors={VertexColors}/>
         </instancedMesh>
     )
 };

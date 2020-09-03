@@ -3,9 +3,9 @@ import storeReducer from './reducers/storeReducer';
 
 const RINGS_AMOUNT = 0;
 const DODECAHEDRONS_AMOUNT = 0;
-const SPHERES_AMOUNT = 10000;
+const SPHERES_AMOUNT = 38500;
 const LATHES_AMOUNT = 0;
-const TETRAHEDRONS_AMOUNT = 400;
+const TETRAHEDRONS_AMOUNT = 0;
 const EMPTY = "EMPTY";
 
 const animation = (amount) => {

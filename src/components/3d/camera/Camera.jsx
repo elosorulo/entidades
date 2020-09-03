@@ -21,7 +21,6 @@ const Camera = (props) => {
         if(props.animation) {
             const startTime = props.startTime;
             const currentTime = getCurrentTime(clock,startTime, props.animation.speed);
-            console.log(props.animation.speed);
             const alpha = (currentTime / props.animation.duration);
             const initialPosition = arrayToVector(props.animation.initialPosition);
             const finalPosition = arrayToVector(props.animation.finalPosition);

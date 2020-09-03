@@ -2,25 +2,6 @@
     "startTime": 0,
     "events": [
         {
-            "time": 0,
-            "type": "SINGLE",
-            "action": "ADD",
-            "element": "SOUND",
-            "props": {
-                "key": "sonido",
-                "file": "sonido"
-            }
-        },
-        {
-            "time": 0,
-            "type": "SINGLE",
-            "action": "PLAY",
-            "element": "SOUND",
-            "props": {
-                "key": "sonido"
-            }
-        },
-        {
             "time": 0.00,
             "type": "SINGLE",
             "action": "MOVE",
@@ -29,9 +10,9 @@
                 "animation": {
                     "initialRotation": [0, 0, 0],
                     "finalRotation": [0, 0, 0],
-                    "initialPosition": [-100, 10, -80],
-                    "finalPosition": [0, 10, -80],
-                    "duration": 30,
+                    "initialPosition": [0, 10, -80],
+                    "finalPosition": [-150, 10, -80],
+                    "duration": 45,
                     "speed": 1
                 }
             }
@@ -68,7 +49,7 @@
             "props": {
                 "rotation": [0, 0, 0],
                 "position": [0, 0, -150],
-                "color": "hsla(210, 100% , 25%, 1)",
+                "color": "hsla(265, 80% , 45%, 1)",
                 "width": 1500,
                 "height": 1500
             }
@@ -84,7 +65,7 @@
                 "initialPosition": [-100, 10, -100],
                 "finalPosition": [-90, 10, -100]
             },
-            "sprites": ["BLUE_DIALOG"]
+            "sprites": ["PURPLE_DIALOG"]
         },
         {
             "time": 0,
@@ -97,7 +78,7 @@
                 "initialPosition": [-100, 10, -100],
                 "finalPosition": [-100, 10, -100]
             },
-            "sprites": ["BLUE_ENTITY"]
+            "sprites": ["PURPLE_ENTITY"]
         },
         {
             "time": 0,
@@ -110,7 +91,7 @@
                 "initialPosition": [-90, 10, -100],
                 "finalPosition": [-90, 10, -100]
             },
-            "sprites": ["BLUE_ENTITY"]
+            "sprites": ["PURPLE_ENTITY"]
         }
     ]
 }

@@ -23,7 +23,6 @@ const positionInterpolation = (mesh, initialPosition, finalPosition, alpha) => {
 
 const scaleInterpolation = (mesh, initialScale, finalScale, alpha, shape) => {
     const nextScale = interpolation(initialScale, finalScale, modulate(shape.modulation, alpha));
-    
     mesh.scale.x = nextScale.x;
     mesh.scale.y = nextScale.y;
     mesh.scale.z = nextScale.z;
@@ -52,7 +51,7 @@ const animateShape = (mesh, clock, shape, index) => {
         
         const a = (segmentCurrentTime / shape.duration);
         const alpha = shape.loop ? (shape.loop.isReverse ? a % 2: a % 1) : a;
-        if(alpha >= 0 && alpha <2) {
+        if(alpha >= 0 && ((alpha <2 && shape.loop && shape.loop.isReverse) || alpha < 1)) {
             const initialPosition = arrayToVector(shape.initialPosition);
             const finalPosition = arrayToVector(shape.finalPosition);
             const initialScale = arrayToVector(shape.initialScale);

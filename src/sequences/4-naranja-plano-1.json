@@ -1,0 +1,98 @@
+{ 
+    "startTime": 9.64,
+    "events": [
+        {
+            "time": 9.66,
+            "type": "SINGLE",
+            "action": "MOVE",
+            "element": "CAMERA",
+            "props": {
+                "fov": 50,
+                "animation": {
+                    "initialPosition": [-300, 25, -25],
+                    "finalPosition": [100, 25, -25],
+                    "initialRotation": [-0.15, -0.15, 0],
+                    "finalRotation": [-0.15, -0.15, 0],
+                    "duration": 60,
+                    "speed": 1
+                }
+            }
+        },
+        {
+            "time": 9.66,
+            "type": "SINGLE",
+            "action": "SET",
+            "element": "AMBIENT_LIGHT",
+            "props": {
+                "intensity": 0.5
+            }
+        },
+        {
+            "id": "MAIN_SPOTLIGHT_1",
+            "time": 9.66,
+            "type": "SINGLE",
+            "action": "SET",
+            "element": "SPOT_LIGHT",
+            "props": {
+                "position": [0, 150, -75],
+                "target": [0, 0, 10],
+                "angle": 1,
+                "penumbra": 0.2,
+                "intensity": 1
+            }
+        },
+        {
+            "id": "BACKGROUND_PLANE_1",
+            "time": 9.66,
+            "type": "SINGLE",
+            "action": "SET",
+            "element": "PLANE",
+            "props": {
+                "rotation": [0, 0, 0],
+                "position": [0, 0, -500],
+                "color": "hsla(27, 100% , 45%, 1)",
+                "width": 15000,
+                "height": 15000
+            }
+        },
+        {
+            "time": 9.66,
+            "type": "POLYPHONIC",
+            "polyphony": {
+                "type": "INTERPOLATION_GRID",
+                "delay": 0,
+                "amount": [15, 5, 20],
+                "separation": [20, 20, 20],
+                "initialPosition": [-200, 10, -100],
+                "finalPosition": [-190, 10, -100]
+            },
+            "sprites": ["ORANGE_DIALOG"]
+        },
+        {
+            "time": 9.66,
+            "type": "POLYPHONIC",
+            "polyphony": {
+                "type": "INTERPOLATION_GRID",
+                "delay": 0,
+                "amount": [15, 5, 20],
+                "separation": [20, 20, 20],
+                "initialPosition": [-200, 10, -100],
+                "finalPosition": [-200, 10, -100]
+            },
+            "sprites": ["ORANGE_ENTITY"]
+        },
+        {
+            "time": 9.66,
+            "type": "POLYPHONIC",
+            "polyphony": {
+                "type": "INTERPOLATION_GRID",
+                "delay": 0,
+                "amount": [15, 5, 5],
+                "separation": [20, 20, 20],
+                "initialPosition": [-190, 10, -100],
+                "finalPosition": [-190, 10, -100]
+            },
+            "sprites": ["ORANGE_ENTITY"]
+        }
+    ]
+}

@@ -1,0 +1,226 @@
+{
+    "sprites": {
+        "BLUE_DIALOG": { 
+            "action": "PLAY",
+            "type": "SINGLE",
+            "element": "SPHERES_ANIMATION",
+            "props": {
+                "animationSize": 10,
+                "loop": {
+                    "isReverse": true
+                },
+                "color": "hsla(210, 90%, 20%, 1)",
+                "modulation": {
+                    "type": "SINE",
+                    "frequency": 5,
+                    "amplitude": 1
+                },
+                "initialScale": [0.4, 0.2, 0.2],
+                "finalScale": [0, 0, 0],
+                "initialPosition": [30, 10, 0],
+                "finalPosition": [-30, 10, 0],
+                "duration": 0.250,
+                "speed": 1,
+                "separation": 1.0
+            }
+        },
+        "GREEN_DIALOG": { 
+            "action": "PLAY",
+            "type": "SINGLE",
+            "element": "RINGS_ANIMATION",
+            "props": {
+                "animationSize": 10,
+                "loop": {
+                    "isReverse": true
+                },
+                "color": "hsla(100, 90%, 20%, 1)",
+                "modulation": {
+                    "type": "SAWTOOTH",
+                    "frequency": 3,
+                    "amplitude": 1
+                },
+                "initialScale": [1, 1, 1],
+                "finalScale": [0, 0, 0],
+                "initialPosition": [30, 10, 0],
+                "finalPosition": [-30, 10, 0],
+                "duration": 0.250,
+                "speed": 1,
+                "separation": 1.0
+            }
+        },
+        "YELLOW_DIALOG": { 
+            "action": "PLAY",
+            "type": "SINGLE",
+            "element": "DODECAHEDRONS_ANIMATION",
+            "props": {
+                "animationSize": 10,
+                "loop": {
+                    "isReverse": true
+                },
+                "color": "hsla(60, 90%, 20%, 1)",
+                "modulation": {
+                    "type": "SAWTOOTH",
+                    "frequency": 1,
+                    "amplitude": 2
+                },
+                "initialScale": [1, 1, 1],
+                "finalScale": [0, 0, 0],
+                "initialPosition": [30, 10, 0],
+                "finalPosition": [-30, 10, 0],
+                "duration": 0.250,
+                "speed": 1,
+                "separation": 0.5
+            }
+        },
+        "ORANGE_DIALOG": { 
+            "action": "PLAY",
+            "type": "SINGLE",
+            "element": "DODECAHEDRONS_ANIMATION",
+            "props": {
+                "isParticle": true,
+                "animationSize": 10,
+                "loop": {
+                    "isReverse": true
+                },
+                "color": "hsla(27, 90%, 20%, 1)",
+                "modulation": {
+                    "type": "SAWTOOTH",
+                    "frequency": 1,
+                    "amplitude": 2
+                },
+                "initialScale": [1, 1, 1],
+                "finalScale": [0, 0, 0],
+                "initialPosition": [30, 10, 0],
+                "finalPosition": [-30, 10, 0],
+                "duration": 0.250,
+                "speed": 1,
+                "separation": 0.5
+            }
+        },
+        "RED_DIALOG": { 
+            "action": "PLAY",
+            "type": "SINGLE",
+            "element": "TETRAHEDRONS_ANIMATION",
+            "props": {
+                "isParticle": true,
+                "animationSize": 10,
+                "loop": {
+                    "isReverse": true
+                },
+                "color": "hsla(0, 90%, 20%, 1)",
+                "modulation": {
+                    "type": "SAWTOOTH",
+                    "frequency": 1,
+                    "amplitude": 2
+                },
+                "initialScale": [0.1, 0.1, 0.1],
+                "finalScale": [0.01, 0.01, 0.01],
+                "initialPosition": [30, 10, 0],
+                "finalPosition": [-30, 10, 0],
+                "duration": 0.250,
+                "speed": 1,
+                "separation": 0.5
+            }
+        },
+        "BLUE_ENTITY": { 
+            "action": "PLAY",
+            "type": "SINGLE",
+            "element": "SPHERES_ANIMATION",
+            "props": {
+                "animationSize": 1,
+                "loop": {
+                    "isReverse": true
+                },
+                "color": "hsla(210, 90%, 25%, 1)",
+                "modulation": {},
+                "initialScale": [1, 1, 1],
+                "finalScale": [1, 1, 1],
+                "initialPosition": [30, 10, 0],
+                "finalPosition": [30, 10, 0],
+                "duration": 2,
+                "speed": 1,
+                "separation": 1.0
+            }
+        },
+        "GREEN_ENTITY": { 
+            "action": "PLAY",
+            "type": "SINGLE",
+            "element": "SPHERES_ANIMATION",
+            "props": {
+                "animationSize": 1,
+                "loop": {
+                    "isReverse": true
+                },
+                "color": "hsla(100, 90%, 25%, 1)",
+                "modulation": {},
+                "initialScale": [1, 1, 1],
+                "finalScale": [1, 1, 1],
+                "initialPosition": [30, 10, 0],
+                "finalPosition": [30, 10, 0],
+                "duration": 2,
+                "speed": 1,
+                "separation": 1.0
+            }
+        },
+        "YELLOW_ENTITY": { 
+            "action": "PLAY",
+            "type": "SINGLE",
+            "element": "SPHERES_ANIMATION",
+            "props": {
+                "animationSize": 1,
+                "loop": {
+                    "isReverse": true
+                },
+                "modulation": {},
+                "color": "hsla(60, 90%, 25%, 1)",
+                "initialScale": [1, 1, 1],
+                "finalScale": [1, 1, 1],
+                "initialPosition": [30, 10, 0],
+                "finalPosition": [30, 10, 0],
+                "duration": 2,
+                "speed": 1,
+                "separation": 1.0
+            }
+        },
+        "ORANGE_ENTITY": { 
+            "action": "PLAY",
+            "type": "SINGLE",
+            "element": "SPHERES_ANIMATION",
+            "props": {
+                "animationSize": 1,
+                "loop": {
+                    "isReverse": true
+                },
+                "modulation": {},
+                "color": "hsla(27, 90%, 25%, 1)",
+                "initialScale": [1, 1, 1],
+                "finalScale": [1, 1, 1],
+                "initialPosition": [30, 10, 0],
+                "finalPosition": [30, 10, 0],
+                "duration": 2,
+                "speed": 1,
+                "separation": 1.0
+            }
+        },
+        "RED_ENTITY": { 
+            "action": "PLAY",
+            "type": "SINGLE",
+            "element": "SPHERES_ANIMATION",
+            "props": {
+                "animationSize": 1,
+                "loop": {
+                    "isReverse": true
+                },
+                "modulation": {},
+                "color": "hsla(0, 90%, 25%, 1)",
+                "initialScale": [1, 1, 1],
+                "finalScale": [1, 1, 1],
+                "initialPosition": [30, 10, 0],
+                "finalPosition": [30, 10, 0],
+                "duration": 2,
+                "speed": 1,
+                "separation": 1.0
+            }
+        }
+    }
+}

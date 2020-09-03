@@ -10,6 +10,8 @@ import DodecahedronsAnimations from './animations/DodecahedronsAnimations';
 import SpheresAnimations from './animations/SpheresAnimations';
 import TetrahedronsAnimations from './animations/TetrahedronsAnimations';
 import LathesAnimations from './animations/LathesAnimations';
+import Panels from './shapes/Panels';
+import { OrbitControls } from 'drei';
 
 const Scene = (props) => {
   return (
@@ -23,6 +25,7 @@ const Scene = (props) => {
       <SpheresAnimations/>
       <TetrahedronsAnimations/>
       <LathesAnimations/>
+      <Panels/>
       <Effects/>
       <Sequencer soundsApi={props.soundsApi}/>
     </>
